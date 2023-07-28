@@ -1,0 +1,12 @@
+# environment.yaml
+# Environment for running and installing scrapy for this project.
+
+name: scrape_nba
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11.4
+  - pip
+  - pip:
+    - -r file:requirements.txt
