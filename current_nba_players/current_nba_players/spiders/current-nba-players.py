@@ -1,6 +1,6 @@
 
-import scrapy
 import string
+import scrapy
 from current_nba_players.PerGameSeason import PerGameSeason
 
 
@@ -32,7 +32,6 @@ class CurrentNBAPlayerSpider(scrapy.Spider):
             This method parses each of the individual player's page
             i.e. https://www.basketball-reference.com/players/f/foxde01.html
         """
-        player_stats = []
 
         name = response.xpath('//div[@id="info" and @class="players"]//div/h1/span/text()').get()
 
@@ -74,6 +73,5 @@ class CurrentNBAPlayerSpider(scrapy.Spider):
             player["personal_fouls_per_game"] = season.xpath('td[@data-stat="pf_per_g"]/text()').get()
             player["points_per_game"] = season.xpath('td[@data-stat="pts_per_g"]/text()').get()
 
-            player_stats.append(player)
+            yield player
 
-        return player_stats
