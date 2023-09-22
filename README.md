@@ -15,3 +15,7 @@ For this project, we are using [Scrapy](https://scrapy.org) with [Python](https:
 To execute the Scrapy spider, change directory to the current_nba_players/current_nba_players/spiders and run the following command:
 
     scrapy runspider current-nba-players.py -O output.csv:csv
+
+## Discussion
+
+For a more detailed explanation of this code, head on over to my [Medium](https://medium.com/@tony.n.fong/scraping-nba-player-statistics-using-scrapy-ac01e91cfe43) page.
